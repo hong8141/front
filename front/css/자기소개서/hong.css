@@ -1,0 +1,129 @@
+body {
+    margin: 5vh 1vw 5vh 10vw;
+}
+.main {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    border-bottom: solid 5px gray;
+    margin: 0;
+    min-width: 900px;
+    height: 100px;
+    min-height: 100px;
+    line-height: 100px;
+    background-color: rgb(237, 38, 220);
+    border-radius: 5px 0 0 0;
+}
+.maintext {
+text-decoration: none;
+color: white;
+margin: 50px;
+}
+.maintext:hover {
+color:black;
+}
+a {
+color:white;
+text-decoration: none;
+}
+.first ol {
+width: 100px;
+margin-top: 20px;
+}
+.first ol li {
+list-style-type: none;
+padding: auto;
+font-size: 30px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+li {
+list-style-type: none;
+font-size: 18px;
+padding: auto;
+}
+
+.container {
+display: flex;
+height: 50px;
+min-height: 750px;
+min-width: 800px;
+background-color: #f8f9fa;
+}
+
+.feature {
+margin-top: 10px;
+}
+.first {
+background: linear-gradient(to top, #748ffc, #9775fa);
+border-right: 5px solid gray;
+height: 700px;
+width: 150px;
+border-radius: 0px;
+}
+.second {
+background-color: #f8f9fa;
+height: 70vh;
+min-height: 750px;
+width: 80vw;
+min-width: 800px;
+border-radius: 0px 0px 5px 0px;
+}
+.title {
+width: auto;
+font-weight: 600;
+text-align: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+margin: 20px 20px 0px 20px;
+}
+.contetnt {
+    font-size: 18px;
+    margin: auto;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.content .boldText {
+font-weight: 600;
+color:#5f3dc4;
+}
+.img {
+margin-top: 10px;
+width: 400px;
+height: 500px;
+border-radius: 5px;
+}
+table {
+    border: 3px solid black;
+    border-collapse: collapse;
+    background: linear-gradient(45deg, #e599f7, #b197fc);
+    border-radius: 5px 5px 0px 0px;
+}
+
+table tr th:first-child {
+    border: 1px solid white;
+    min-width: 100px;
+    color: white;
+}
+
+table tr th {
+    border:1px solid white;
+    min-width: 400px;
+    color: white;     
+}
+
+table td {
+    border: 1px solid white;
+    background-color: #f8f0fc;
+}
+table td:hover {
+    border: 1px solid white;
+    background-color: white;
+    font-weight: 600;
+    cursor: pointer;
+}

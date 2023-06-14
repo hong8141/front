@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 블록 태그(div, p, ul, ol, hr ...) */
+        /* 인라인 태그(span, img, a, input) */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div,span{
+            border: solid 1px black;
+            background-color: yellow;
+        }
+        #a{
+            width: 100px;
+            height: 100px;
+            margin: 20px; 
+        }
+        #b{
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 20px; 
+        }
+        #c{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 20px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h3>블록과 인라인</h3>
+    <p>
+        글자1 <span id="a"> 요소 A</span>
+        글자2 <span id="b"> 요소 B</span>
+        글자3 <span id="c"> 요소 C</span>
+        글자4
+    </p>
+    
+</body>
+</html>

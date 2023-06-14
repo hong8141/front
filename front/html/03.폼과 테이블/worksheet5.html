@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        td {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>3</h2>
+    <h2>회원 가입</h2>
+    <div>
+        <table>
+            <form>
+                <tr>
+                    <th>아이디</th>
+                    <th><input type="id"></th>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <th><input type="name"></th>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <th><input type="password"></th>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <th><input type="check password"></th>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <th><input type="number" placeholder="010-123-4567"></th>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <th>
+                        <input type="text" placeholder="">@
+                        <select>
+                            <option>직접입력</option>
+                            <option>naver.com</option>
+                            <option>gmail.com</option>
+                            <option>daum.net</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>문자 수신여부</th>
+                    <th>
+                        <input type="radio" name="email" checked> 예
+                        <input type="radio" name="email"> 아니오
+                    </th>
+                </tr>
+                <tr>
+                    <th>가입 경로</th>
+                    <th>
+                        <input type="checkbox" name="item1"> 친구소개
+                        <input type="checkbox" name="item2"> 인터넷 검색
+                        <input type="checkbox" name="item3"> 블로그
+                        <input type="checkbox" name="item4"> 기타
+                    </th>
+                </tr>
+            </form>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 중요한 개인정보는 get이 아닌 무조건 post로 작성 -->
+    <!-- 1. 서버로 입력값을 보내기 위해서는 input 태그는 반드시 form 태그 안에 있어야 한다. -->
+    <!-- 2. form 태그의 action 속성값은 요청 주소다.  -->
+    <!-- 3. 보안을 위해서 post 요청을 추천한다. -->
+    <!-- 4. name 속성값이 서버로 전달된다. -->
+    <form action="watch" method="post">
+        <input type="text" id="n" name="n" placeholder="이름을 입력해주시오"><br>
+        <input type="password" name="ps" placeholder="비밀번호를 입력해주시오"><br>
+        <input type="submit" value="서버로 입력값 보내기">
+        <input type="reset" value="입력값 모두 지우기">
+        <input type="button" value="중복확인">
+    </form>
+</body>
+</html>

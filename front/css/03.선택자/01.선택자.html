@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        body{
+            border: dashed 10px; 
+        }
+        h3 {
+            border: double 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+        /* body태그를 포함한 모든 태그 선택 - 전체 선택자 */
+        *{
+            color: green;
+            margin: 0;
+            padding: 0;
+        }
+        /* 태그 선택자 */
+        h3 {
+            color: yellow;
+        }
+        /* 그룹 선택자 ex)h1,h2,h3,h4,h5,h6 */
+        h3, p {
+            color: red;
+        }
+        /* 아이디 선택자 */
+        #id2{
+            color: aqua;
+        }
+        li {
+            background-color: blue;
+        }
+        ul {
+            background-color: green;
+        }
+        /*클래스 선택자 */
+        .cl1, .c2 {
+            background-color: orangered;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <h3 id="id2">요리의 사전적 의미</h3>
+    <p>1. 여러 조리 과정을 거쳐 음식을 만듦. 2. 어떤 대상을 능숙하게 처리함을 속되게 이르는 말.</p> 
+    <h2>자바</h2>
+    <ul>
+        <li class="cl1">1</li>
+        <li class="c2">2</li>
+        <li>3</li>
+    </ul>
+    <ul>
+        <li class="cl1">4</li>
+        <li class="c2">5</li>
+        <li>6</li>
+    </ul>
+    <ol>
+        <li class="cl1">7</li>
+        <li class="c2">8</li>
+        <li>9</li>
+    </ol>
+
+</body>
+</html>

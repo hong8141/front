@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>1.텍스트 입력창</h2>
+        <!-- placeholder는 예시 -->
+        이름 : <input type="text" placeholder="이름을 입력하시오">
+        <hr>
+        <h2>2.비밀번호 입력창</h2>
+        비밀번호 : <input type="password">
+        <hr>
+        <h2>3.라디오 버튼</h2>
+        <!-- checked는 해당 버튼을 기본적으로 선택해주는 명령어 -->
+        이메일 수신 : <input type="radio" name="email" checked> 예
+        <input type="radio" name="email" > 아니오
+        <hr>
+        <h2>4.체크박스</h2>
+        <!-- p+input*4 -->
+        <p>TV에서 즐겨보는 분야는?</p>
+        <!-- 체크박스는 checked 여래개 사용 가능 -->
+        <input type="checkbox" name="item1">예능
+        <input type="checkbox" name="item2">드라마
+        <input type="checkbox" name="item3" checked>뉴스
+        <input type="checkbox" name="item4">스포츠
+        <hr>
+        <h2>5.선택박스</h2>
+        이메일 : <input type="text" placeholder="">@
+        <select>
+            <option>직접입력</option>
+            <option>naver.com</option>
+            <option>gmail.com</option>
+            <option>daum.net</option>
+        </select>
+        <hr>
+        <h2>6.남기고 싶은 말</h2>
+        <!-- cols : column (열 = 세로줄) 의미; rows 속성 - <textarea> 요소의 행수(= 줄수 = 가시높이) -->
+        <!-- 글자수 초과시 스크롤바가 생기며 더 쓸수 있음 -->
+        <textarea cols="80" rows="6"></textarea>
+        <hr>
+        <h2>7.파일 업로드</h2>
+        <input type="file">
+        <hr>
+        <input type="submit" value="저장">
+
+    </form>
+</body>
+</html>

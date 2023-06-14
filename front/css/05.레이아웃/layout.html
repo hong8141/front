@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03.레이아웃구성</title>
+
+    <style>
+      body {
+        min-width: 1024px;
+        margin: 0;
+      }
+
+      /* 헤더---------------------------------------------- */
+      header {
+        box-sizing: border-box;
+        height: 100px;
+        position: relative;
+        text-align: center;
+      }
+      header ul {
+        margin: 10px;
+        list-style-type: none;
+      }
+      header li {
+        display: inline;
+      }
+      header .user-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      header .menu {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      header .user-info li {
+        margin-left: 5px;
+        font-size: 10pt;
+      }
+      header .menu li {
+        margin-left: 50px;
+        font-size: 13pt;
+        font-weight: bold;
+      }
+      header a {
+        cursor: pointer;
+      }
+      header a:hover {
+        opacity: 0.7;
+      }
+      header img {
+        position: absolute;
+        left: 30%;
+        top: calc((100px - 38px) / 2);
+      }
+      header img:hover {
+        cursor: pointer;
+      }
+
+      /* 메인 이미지---------------------------------------------- */
+      .img-container {
+        position: relative;
+        box-sizing: border-box;
+        height: 200px;
+        background-image: url("./img/main_bg.png");
+        background-size: auto 200px;
+        background-position: center;
+      }
+      .img-container img {
+        position: absolute;
+        height: 25px;
+        top: 145px;
+        right: calc(100% / 2 - 285px);
+      }
+      .img-container img:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      /* 콘텐츠---------------------------------------------- */
+      .content {
+        box-sizing: border-box;
+        margin: auto;
+        width: 900px;
+        height: 500px;
+      }
+
+      /* 사이드바---------------------------------------------- */
+      aside {
+        float: left;
+        box-sizing: border-box;
+        width: 20%;
+        padding: 30px 0;
+      }
+      aside ul {
+        list-style-type: none;
+        padding: 0 8px;
+      }
+      .aside-title {
+        background-color: rgb(7, 160, 163);
+        color: #fff;
+        padding: 8px;
+        margin: 0;
+      }
+      aside p {
+        padding: 8px;
+        font-size: 10pt;
+      }
+      aside input {
+        box-sizing: border-box;
+        width: calc(100% - 50px);
+        vertical-align: top;
+        height: 24px;
+      }
+      aside button {
+        width: 45px;
+        float: right;
+      }
+      .aside-category-wrapper h4 {
+        padding: 8px;
+        border-top: 2px solid #000;
+        border-bottom: 1px solid #ccc;
+      }
+      .aside-category-wrapper li {
+        margin: 5px 0;
+      }
+      .aside-category-wrapper li:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      .aside-comment-wrapper {
+        border: 2px solid rgb(7, 160, 163);
+      }
+      .aside-comment-wrapper h4 {
+        margin: 15px 0 0 0;
+        padding: 0 8px;
+      }
+      .aside-comment-wrapper ul {
+        margin: 15px 0;
+      }
+      .aside-comment-wrapper li {
+        margin: 5px 0;
+      }
+      .aside-comment-wrapper li:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+
+      /* 섹션---------------------------------------------- */
+      section {
+        float: right;
+        box-sizing: border-box;
+        width: 80%;
+      }
+      .section-board-wrapper {
+        box-sizing: border-box;
+        width: 50%;
+        float: left;
+      }
+      .section-board {
+        padding: 20px;
+      }
+      section h4 {
+        border-bottom: 2px solid #000;
+        padding: 8px 0;
+      }
+      .section-board ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .section-board li {
+        margin: 10px 0;
+        font-size: 10pt;
+      }
+      .section-board li:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      .section-board li span {
+        float: right;
+      }
+      .section-class-wrapper {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 20px;
+        float: right;
+      }
+      .class-item-wrapper {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 5px 30px 5px;
+        float: left;
+      }
+      .class-item-wrapper:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      .class-item-wrapper img {
+        width: 100%;
+      }
+      .class-item-wrapper p {
+        margin: 3px 0;
+        font-size: 10pt;
+      }
+      .class-item-wrapper span {
+        font-weight: bold;
+      }
+
+      /* 푸터---------------------------------------------- */
+      footer {
+        clear: both;
+        box-sizing: border-box;        height: 200px;
+        background-color: rgb(5, 53, 78);
+        color: #fff;
+        text-align: center;
+      }
+      .footer-wrapper {
+        width: fit-content;
+        margin: auto;
+      }
+      footer ul {
+        box-sizing: border-box;
+        list-style-type: none;
+        padding-left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      footer h4 {
+        color: rgb(7, 160, 163);
+        text-align: left;
+      }
+      footer span {
+        font-size: 15pt;
+        font-weight: bold;
+      }
+      footer a {
+        cursor: pointer;
+      }
+      footer a:hover {
+        opacity: 0.7;
+      }
+      .footer-menu {
+        box-sizing: border-box;
+        padding-top: 10px;
+        text-align: left;
+        font-size: 10pt;
+      }
+      .footer-menu li {
+        display: inline;
+        margin-right: 30px;
+      }
+      .footer-list-wrapper {
+        box-sizing: border-box;
+        float: left;
+        margin-right: 80px;
+      }
+      .footer-list-wrapper:nth-last-child(1) {
+        margin-right: 0;
+      }
+      .footer-list-wrapper ul {
+        font-size: 9pt;
+      }
+      .footer-list-wrapper li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul class="user-info">
+        <li><a>김용진(yjkim)님</a></li>
+        <li>|</li>
+        <li><a>로그아웃</a></li>
+        <li>|</li>
+        <li><a>정보수정</a></li>
+      </ul>
+      <ul class="menu">
+        <li><a>Home</a></li>
+        <li><a>출석부</a></li>
+        <li><a>작품갤러리</a></li>
+        <li><a>게시판</a></li>
+      </ul>
+      <img src="./img/logo.png" />
+    </header>
+
+    <div class="img-container">
+      <img src="./img/btn_class.png" />
+    </div>
+
+    <div class="content">
+      <aside>
+        <h4 class="aside-title">The 베이킹</h4>
+        <p>안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.</p>
+        <input type="text" /><button>검색</button>
+        <div class="aside-category-wrapper">
+          <h4>베이킹/요리</h4>
+          <ul>
+            <li>쿠키 만들기</li>
+            <li>빵 만들기</li>
+            <li>마카롱 만들기</li>
+          </ul>
+        </div>
+        <div class="aside-comment-wrapper">
+          <h4>최근 댓글</h4>
+          <ul>
+            <li>안녕하세요.</li>
+            <li>안녕하세요.</li>
+            <li>안녕하세요.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <section>
+        <div class="section-board-wrapper">
+          <div class="section-board">
+            <h4>알림</h4>
+            <ul>
+              <li>쿠킹 클래스 연기합니다.<span>09.30</span></li>
+              <li>쿠킹 클래스 연기합니다.<span>09.30</span></li>
+              <li>쿠킹 클래스 연기합니다.<span>09.30</span></li>
+              <li>쿠킹 클래스 연기합니다.<span>09.30</span></li>
+              <li>쿠킹 클래스 연기합니다.<span>09.30</span></li>
+            </ul>
+          </div>
+          <div class="section-board">
+            <h4>게시판</h4>
+            <ul>
+              <li>안녕하세요. 반갑습니다.<span>09.30</span></li>
+              <li>안녕하세요. 반갑습니다.<span>09.30</span></li>
+              <li>안녕하세요. 반갑습니다.<span>09.30</span></li>
+              <li>안녕하세요. 반갑습니다.<span>09.30</span></li>
+              <li>안녕하세요. 반갑습니다.<span>09.30</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-class-wrapper">
+          <h4>제빵 클래스</h4>
+
+          <div class="class-item-wrapper">
+            <img src="./img/bread1.png" />
+            <p><span>도너트 만들기[3]</span></p>
+            <p>21.09.30</p>
+          </div>
+          <div class="class-item-wrapper">
+            <img src="./img/bread2.png" />
+            <p><span>도너트 만들기[3]</span></p>
+            <p>21.09.30</p>
+          </div>
+          <div class="class-item-wrapper">
+            <img src="./img/bread3.png" />
+            <p><span>도너트 만들기[3]</span></p>
+            <p>21.09.30</p>
+          </div>
+          <div class="class-item-wrapper">
+            <img src="./img/bread4.png" />
+            <p><span>도너트 만들기[3]</span></p>
+            <p>21.09.30</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-wrapper">
+        <ul class="footer-menu">
+          <li><a>The 베이킹 소개</a></li>
+          <li><a>개인정보처리방침</a></li>
+          <li><a>저작권 정보</a></li>
+          <li><a>이용 안내</a></li>
+        </ul>
+        <div class="footer-list-wrapper">
+          <h4>문의전화</h4>
+          <ul>
+            <li><span>123-1234</span></li>
+            <li>10:00 - 18:00(Lunch 12:00 - 13:00)</li>
+          </ul>
+        </div>
+        <div class="footer-list-wrapper">
+          <h4>The 베이킹</h4>
+          <ul>
+            <li>주소 : 경기도 용인시 기흥구 동백대로 123</li>
+            <li>전화 : 031-123-1234</li>
+            <li>팩스 : 031-123-1234</li>
+            <li>이메일: thebaking@baking.com</li>
+          </ul>
+        </div>
+        <div class="footer-list-wrapper">
+          <h4>입금 정보</h4>
+          <ul>
+            <li>농협 123-123-123456</li>
+            <li>The 베이킹</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
